@@ -1,4 +1,7 @@
-<h1> <%= @list.name %></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key %>')">
+    <h1> <%= @list.name %> </h1>
+</div>
+
 
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
 
