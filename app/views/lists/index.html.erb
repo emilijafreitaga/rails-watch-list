@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: url(https://www.orlandosentinel.com/wp-content/uploads/migration/2022/01/16/MAR6V2TTDZGRROJIQC5OZ55ZOU.jpg?w=620);">
-  <div class="container">
+  <div class="container px-1">
     <h1> My lists </h1>
   </div>
 </div>
@@ -8,9 +8,10 @@
   <div class="cards">
     <% @lists.each do |list| %>
 
-    <div class="card-category justify-content-around my-3 mx-3 shadow p-3 mb-5 bg-body-tertiary rounded" style="background-image: url('<%= cl_image_path list.photo.key %>')">
+    <div class="card-category justify-content-around my-3 mx-3 shadow p-3 mb-5 bg-body-tertiary rounded border border-black" style="background-image: url('<%= cl_image_path list.photo.key %>')">
       <%= link_to list.name, list_path(list), class: "text-white text-decoration-none" %>
     </div>
+    
     <% end %>
   </div>
 </div>
