@@ -1,5 +1,5 @@
-<div class="banner" style="background-image: url(https://www.orlandosentinel.com/wp-content/uploads/migration/2022/01/16/MAR6V2TTDZGRROJIQC5OZ55ZOU.jpg?w=620);">
-  <div class="container px-1">
+<div class="banner" style="background-image: url(https://www.arabianbusiness.com/cloud/2022/08/09/AB-Picture-Template-1200x800-1.png);">
+  <div class="px-3">
     <h1> My lists </h1>
   </div>
 </div>
@@ -10,8 +10,11 @@
 
     <div class="card-category justify-content-around my-3 mx-3 shadow p-3 mb-5 bg-body-tertiary rounded border border-black" style="background-image: url('<%= cl_image_path list.photo.key %>')">
       <%= link_to list.name, list_path(list), class: "text-white text-decoration-none" %>
+      <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+      <i class="fa-solid fa-trash fa-shake" style="color: #ff0000;"></i>
+      <% end %>
     </div>
-    
+
     <% end %>
   </div>
 </div>
